@@ -68,7 +68,7 @@ def showFeed():
         if phone_found:
             if portConnect:
                 print("phone detected")
-                # phoneDetected, Direction(HIGH = cw, LOW = ccw)
+                # phoneDetected, Direction(HIGH = cw, LOW = ccw),
                 direction = determineLeftRight(frameCenterWidth, frameCenterHeight, (x1 + x2)//2, (y1 + y2)//2)
                 if direction == "CW":
                     ser.write(b"True,CW\n")
